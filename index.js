@@ -1,6 +1,6 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
-const generatedHTML = require('./dist/generatedHTML');
+//const generatedHTML = require('./dist/generatedHTML');
 const Employee = require('./lib/Employee.js');
 const Manager = require('./lib/Manager.js');
 const Engineer = require('./lib/Engineer.js');
@@ -13,7 +13,7 @@ addTeamMember();
 function addTeamMember() {
     inquirer.prompt( 
     {
-        type: 'choices',
+        type: 'list',
         name: 'role',
         message: "Would you like to add a new employee's role or finish your team?",
         choices: ['Manager', 'Engineer', 'Intern', 'Finish my team'],
@@ -232,27 +232,27 @@ function internRole() {
 
 
 // Function to write HTML file
-function writeToFile(fileName, data) {
-    fs.writeFile(fileName, data, err => {
-            if (err) {
-                return console.log(err);
-            }
+//function writeToFile(fileName, data) {
+    //fs.writeFile(fileName, data, err => {
+            //if (err) {
+          //      return console.log(err);
+        //    }
     
-        console.log("You can preview your HTML file now!");
+      //  console.log("You can preview your HTML file now!");
     
-    });
-    };
+    //});
+    //};
     
     // Function to initialize app
-    function init(teamInfo) {
-        inquirer.prompt()
-        .then(function (userInput) {
-            console.log(userInput)
-            writeToFile('./dist/generatedHTML', generateHTML(userInput));
-        });
-    };
+  //  function init(teamInfo) {
+    //    inquirer.prompt()
+      //  .then(function (userInput) {
+        //    console.log(userInput)
+          //  writeToFile('./dist/generatedHTML', generateHTML(userInput));
+        //});
+    //};
     
     
     // Function call to initialize app
-    init();
+    //init();
     
