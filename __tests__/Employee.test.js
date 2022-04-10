@@ -1,7 +1,7 @@
-const Employee = require('./lib/Employee');
+const Employee = require('../lib/Employee.js');
+const employee = new Employee('Janice', '987654321', 'janice@gmail.com');
 
 test('creates a new employee object', () => {
-    const employee = new Employee('Janice', '987654321', 'janice@gmail.com');
 
     expect(employee.name).toBe('Janice');
     expect(employee.id).toBe('987654321');
