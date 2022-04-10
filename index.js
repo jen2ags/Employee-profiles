@@ -16,7 +16,16 @@ function addTeamMember() {
         type: 'choices',
         name: 'role',
         message: "Would you like to add a new employee's role or finish your team?",
-        choices: ['Manager', 'Engineer', 'Intern', 'Finish my team']
+        choices: ['Manager', 'Engineer', 'Intern', 'Finish my team'],
+
+        validate: roleInput => {
+            if (roleInput) {
+                return true;
+            } else {
+                console.log("Please enter your Employee's role!");
+                return false;
+            }
+        }
     })
 
     .then (function(data) {
@@ -43,23 +52,58 @@ function managerRole() {
     {
         type: 'input',
         name: ' name',
-        message: "What is the employee's name?"
+        message: "What is the employee's name?",
 
+        validate: nameInput => {
+            if (nameInput) {
+                return true;
+            } else {
+                console.log("Please enter the Manager's name!");
+                return false;
+            }
+        }
     },
     {
         type: 'input',
         name: 'id',
-        message: "What is the employee's ID number?"  
+        message: "What is the employee's ID number?",
+        
+        validate: idInput => {
+            if (idInput) {
+                return true;
+            } else {
+                console.log("Please enter your manager's ID number!");
+                return false;
+            }
+        }
     },
     {
         input: 'input',
         name: 'email',
-        message: "What is the employee's email address?"
+        message: "What is the employee's email address?",
+
+        validate: emailInput => {
+            if (emailInput) {
+                return true;
+            } else {
+                console.log("Please enter your manager's email address!");
+                return false;
+            }
+        }
     },
     {
         type: 'input',
         name: 'officeNumber',
-        message: "What is the manager's office number?"
+        message: "What is the manager's office number?",
+
+        validate: officeNumberInput => {
+            if (officeNumberInput) {
+                return true;
+            } else {
+                console.log("Please enter the manager's office number!");
+                return false;
+            }
+        }
     })
 }
 
@@ -68,24 +112,60 @@ function engineerRole() {
     inquirer.prompt (
     {
         type: 'input',
-    name: ' name',
-    message: "What is the employee's name?"
+        name: ' name',
+        message: "What is the employee's name?",
+
+    validate: nameInput => {
+        if (nameInput) {
+            return true;
+        } else {
+            console.log("Please enter the engineer's name!");
+            return false;
+        }
+    }
 
     },
     {
         type: 'input',
         name: 'id',
-        message: "What is the employee's ID number?"
+        message: "What is the employee's ID number?",
+
+        validate: idInput => {
+            if (idInput) {
+                return true;
+            } else {
+                console.log("Please enter your engineer's ID number!");
+                return false;
+            }
+        }
     },
     {
         input: 'input',
         name: 'email',
-        message: "What is the employee's email address?"
+        message: "What is the employee's email address?",
+
+        validate: emailInput => {
+            if (emailInput) {
+                return true;
+            } else {
+                console.log("Please enter your engineer's email address!");
+                return false;
+            }
+        }
     },
     {
         type: 'input',
         name: 'github',
-        message: "What is the engineer's github username?"
+        message: "What is the engineer's github username?",
+
+        validate: githubInput => {
+            if (githubInput) {
+                return true;
+            } else {
+                console.log("Please enter the engineer's github username!");
+                return false;
+            }
+        }
     })
 }
 
@@ -95,22 +175,58 @@ function internRole() {
     {
         type: 'input',
         name: ' name',
-        message: "What is the employee's first and last name?"
+        message: "What is the employee's name?",
+
+        validate: nameInput => {
+            if (nameInput) {
+                return true;
+            } else {
+                console.log("Please enter the intern's name!");
+                return false;
+            }
+        }
     },
     {
         type: 'input',
         name: 'id',
-        message: "What is the employee's ID number?"
+        message: "What is the employee's ID number?",
+
+        validate: idInput => {
+            if (idInput) {
+                return true;
+            } else {
+                console.log("Please enter your intern's ID number!");
+                return false;
+            }
+        }
     },
     {
         input: 'input',
         name: 'email',
-        message: "What is the employee's email address?"
+        message: "What is the employee's email address?",
+
+        validate: emailInput => {
+            if (emailInput) {
+                return true;
+            } else {
+                console.log("Please enter your intern's email address!");
+                return false;
+            }
+        }
     },
     {
         type: 'input',
         name: 'school',
-        message: "What school is the intern attending?"
+        message: "What school is the intern attending?",
+
+        validate: schoolInput => {
+            if (schoolInput) {
+                return true;
+            } else {
+                console.log("Please enter the intern's school!");
+                return false;
+            }
+        }
     })
 }
 
@@ -128,11 +244,11 @@ function writeToFile(fileName, data) {
     };
     
     // Function to initialize app
-    function init() {
-        inquirer.prompt(questions)
+    function init(teamInfo) {
+        inquirer.prompt()
         .then(function (userInput) {
             console.log(userInput)
-            writeToFile('./dist/generatedHTML', (userInput));
+            writeToFile('./dist/generatedHTML', generateHTML(userInput));
         });
     };
     
