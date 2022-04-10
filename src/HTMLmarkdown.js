@@ -1,0 +1,4 @@
+generateHTML (data) {
+    return `
+    `
+}
