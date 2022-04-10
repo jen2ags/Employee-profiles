@@ -11,7 +11,7 @@ addTeamMember();
 
 //Choose a type of team member to add
 function addTeamMember() {
-    inquirer.prompt( 
+    inquirer.prompt( [
     {
         type: 'list',
         name: 'role',
@@ -26,7 +26,8 @@ function addTeamMember() {
                 return false;
             }
         }
-    })
+    }])
+
 
     .then (function(data) {
         const role = data.role;
@@ -48,7 +49,7 @@ function addTeamMember() {
 
 //If manager is chosen, these question will be asked
 function managerRole() {
-    inquirer.prompt ( 
+    inquirer.prompt ( [
     {
         type: 'input',
         name: ' name',
@@ -104,12 +105,12 @@ function managerRole() {
                 return false;
             }
         }
-    })
+    }])
 }
 
 //If engineer is chosen, these questions will be asked
 function engineerRole() {
-    inquirer.prompt (
+    inquirer.prompt ([
     {
         type: 'input',
         name: ' name',
@@ -166,12 +167,12 @@ function engineerRole() {
                 return false;
             }
         }
-    })
+    }])
 }
 
 //If intern is chosen, these questions will be asked
 function internRole() {
-    inquirer.prompt ( 
+    inquirer.prompt ([ 
     {
         type: 'input',
         name: ' name',
@@ -227,7 +228,7 @@ function internRole() {
                 return false;
             }
         }
-    })
+    }])
 }
 
 
