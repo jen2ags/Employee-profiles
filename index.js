@@ -52,7 +52,7 @@ function managerRole() {
     {
         type: 'input',
         name: ' name',
-        message: "What is the employee's name?",
+        message: "What is the manager's name?",
 
         validate: nameInput => {
             if (nameInput) {
@@ -66,7 +66,7 @@ function managerRole() {
     {
         type: 'input',
         name: 'id',
-        message: "What is the employee's ID number?",
+        message: "What is the manager's ID number?",
         
         validate: idInput => {
             if (idInput) {
@@ -80,7 +80,7 @@ function managerRole() {
     {
         input: 'input',
         name: 'email',
-        message: "What is the employee's email address?",
+        message: "What is the manager's email address?",
 
         validate: emailInput => {
             if (emailInput) {
@@ -113,7 +113,7 @@ function engineerRole() {
     {
         type: 'input',
         name: ' name',
-        message: "What is the employee's name?",
+        message: "What is the engineer's name?",
 
     validate: nameInput => {
         if (nameInput) {
@@ -128,7 +128,7 @@ function engineerRole() {
     {
         type: 'input',
         name: 'id',
-        message: "What is the employee's ID number?",
+        message: "What is the engineer's ID number?",
 
         validate: idInput => {
             if (idInput) {
@@ -142,7 +142,7 @@ function engineerRole() {
     {
         input: 'input',
         name: 'email',
-        message: "What is the employee's email address?",
+        message: "What is the engineer's email address?",
 
         validate: emailInput => {
             if (emailInput) {
@@ -175,7 +175,7 @@ function internRole() {
     {
         type: 'input',
         name: ' name',
-        message: "What is the employee's name?",
+        message: "What is the intern's name?",
 
         validate: nameInput => {
             if (nameInput) {
@@ -189,7 +189,7 @@ function internRole() {
     {
         type: 'input',
         name: 'id',
-        message: "What is the employee's ID number?",
+        message: "What is the intern's ID number?",
 
         validate: idInput => {
             if (idInput) {
@@ -203,7 +203,7 @@ function internRole() {
     {
         input: 'input',
         name: 'email',
-        message: "What is the employee's email address?",
+        message: "What is the intern's email address?",
 
         validate: emailInput => {
             if (emailInput) {
