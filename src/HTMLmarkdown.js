@@ -12,7 +12,7 @@ const createTeam = (teamInfo) => {
     <div>
         <div>
         ${manager.name} <br/>
-        ${manager.role}
+        Manager
             <section>
             <ul>
             <li> ID: ${manager.id}</li>
@@ -36,7 +36,7 @@ const createTeam = (teamInfo) => {
     <div>
         <div>
         ${engineer.name} <br/>
-        ${engineer.role}
+        Engineer
             <section>
             <ul>
             <li> ID: ${engineer.id}</li>
@@ -62,7 +62,7 @@ const createTeam = (teamInfo) => {
     <div>
         <div>
         ${intern.name} <br/>
-        ${intern.role}
+        Intern
             <section>
             <ul>
             <li> ID: ${intern.id}</li>

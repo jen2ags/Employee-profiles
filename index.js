@@ -52,7 +52,7 @@ function managerRole() {
     inquirer.prompt ( [
     {
         type: 'input',
-        name: ' name',
+        name: 'name',
         message: "What is the manager's name?",
 
         validate: nameInput => {
@@ -118,7 +118,7 @@ function engineerRole() {
     inquirer.prompt ([
     {
         type: 'input',
-        name: ' name',
+        name: 'name',
         message: "What is the engineer's name?",
 
     validate: nameInput => {
@@ -185,7 +185,7 @@ function internRole() {
     inquirer.prompt ([ 
     {
         type: 'input',
-        name: ' name',
+        name: 'name',
         message: "What is the intern's name?",
 
         validate: nameInput => {
