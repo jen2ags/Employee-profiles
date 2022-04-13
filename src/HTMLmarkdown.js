@@ -17,7 +17,7 @@ const createTeam = (teamInfo) => {
             <ul>
             <li> ID: ${manager.id}</li>
             <li> Email: 
-                <a href="mailto:${manager.email}>${manager.email}</a>
+                <a href="mailto:${manager.email}">${manager.email}</a>
             </li>
             <li> Office Number: ${manager.officeNumber}</li>
             </ul>
@@ -41,10 +41,10 @@ const createTeam = (teamInfo) => {
             <ul>
             <li> ID: ${engineer.id}</li>
             <li> Email: 
-                <a href="mailto:${engineer.email}>${engineer.email}</a>
+                <a href="mailto:${engineer.email}">${engineer.email}</a>
             </li>
             <li> Github: 
-                <a href="https://github.com/${engineer.github}">${engineer.github}</a>
+                <a href="https://github.com/${engineer.github}">https://github.com/${engineer.github}</a>
             </li>
             </ul>
             </section>
@@ -67,7 +67,7 @@ const createTeam = (teamInfo) => {
             <ul>
             <li> ID: ${intern.id}</li>
             <li> Email: 
-                <a href="mailto:${intern.email}>${intern.email}</a>
+                <a href="mailto:${intern.email}">${intern.email}</a>
             <li> School: ${intern.school}</li>
             </ul>
             </section>
