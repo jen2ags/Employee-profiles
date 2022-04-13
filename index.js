@@ -1,6 +1,6 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
-//const generatedHTML = require('./dist/generatedHTML');
+const generatedHTML = require('./src/HTMLmarkdown.js');
 const Employee = require('./lib/Employee.js');
 const Manager = require('./lib/Manager.js');
 const Engineer = require('./lib/Engineer.js');
@@ -105,8 +105,13 @@ function managerRole() {
                 return false;
             }
         }
-    }])
-}
+    }
+]).then (answers => {
+    const manager = new Manager(answers.name, answers.id, answers.email, answers.officeNumber)
+    teamInfo.push(manager);
+    addTeamMember();
+})
+};
 
 //If engineer is chosen, these questions will be asked
 function engineerRole() {
@@ -167,8 +172,13 @@ function engineerRole() {
                 return false;
             }
         }
-    }])
-}
+    }
+]).then (answers => {
+    const engineer = new Engineer(answers.name, answers.id, answers.email, answers.github)
+    teamInfo.push(engineer);
+    addTeamMember();
+})
+};
 
 //If intern is chosen, these questions will be asked
 function internRole() {
@@ -228,9 +238,18 @@ function internRole() {
                 return false;
             }
         }
-    }])
-}
+    }
+]).then (answers => {
+    const intern = new Intern(answers.name, answers.id, answers.email, answers.school)
+    teamInfo.push(intern);
+    addTeamMember();
+})
+};
 
+function createTeam() {
+    fs.writeFileSync('./dist/generatedHTML.html', generatedHTML(teamInfo), 'UTF-8');
+    console.log('You have created your HTML for your employees!');
+}
 
 // Function to write HTML file
 //function writeToFile(fileName, data) {
