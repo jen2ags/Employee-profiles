@@ -1,4 +1,11 @@
-generateHTML (data) {
+const createTeam = (teamInfo) => {
+    console.log(teamInfo);
+
+    const htmlTeamInfo = [];
+}
+
+
+module.exports = teamInfo => {
     return `
     <!Doctype html>
     <html lang="en">
@@ -6,9 +13,9 @@ generateHTML (data) {
         <meta charset = "UTF-8">
         <meta name="viewport" content="widthc=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Employee Profiles</title>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
         <link href="https://fonts.googleapis.com/css?family=Public+Sans:300i,300,500&display=swap" rel="stylesheet">
+        <title>Employee Profiles</title>
     </head>
     
     <body>
@@ -18,9 +25,7 @@ generateHTML (data) {
             </div>
         </header>
         <main class="container my-5">
-            ${managerRole()}
-            ${engineerRole()}
-            ${internRole()}
+            ${createTeam(teamInfo)}
         </main>
     </body>
     </html>
