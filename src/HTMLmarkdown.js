@@ -9,11 +9,12 @@ const createTeam = (teamInfo) => {
         console.log(manager);
         var htmlManager = `
     
-    <div>
-        <div>
+    <div class="tile">
+        <div class="is-child title is-primary">
         ${manager.name} <br/>
         Manager
-            <section>
+        </div>
+            <section class="is-link">
             <ul>
             <li> ID: ${manager.id}</li>
             <li> Email: 
@@ -22,7 +23,6 @@ const createTeam = (teamInfo) => {
             <li> Office Number: ${manager.officeNumber}</li>
             </ul>
             </section>
-        </div>
     </div>
     `;
         htmlTeamInfo.push(htmlManager);
@@ -33,11 +33,12 @@ const createTeam = (teamInfo) => {
         console.log(engineer);
         var htmlEngineer = `
     
-    <div>
-        <div>
+    <div class="tile">
+        <div class="is-child title is-primary">
         ${engineer.name} <br/>
         Engineer
-            <section>
+        </div>
+            <section class="is-link">
             <ul>
             <li> ID: ${engineer.id}</li>
             <li> Email: 
@@ -48,7 +49,6 @@ const createTeam = (teamInfo) => {
             </li>
             </ul>
             </section>
-        </div>
     </div>
     `;
         htmlTeamInfo.push(htmlEngineer);
@@ -59,11 +59,12 @@ const createTeam = (teamInfo) => {
         console.log(intern);
         var htmlIntern = `
     
-    <div>
-        <div>
+    <div class="tile">
+        <div class="is-cheild title is-primary">
         ${intern.name} <br/>
         Intern
-            <section>
+        </div>
+            <section class="is-link">
             <ul>
             <li> ID: ${intern.id}</li>
             <li> Email: 
@@ -71,7 +72,6 @@ const createTeam = (teamInfo) => {
             <li> School: ${intern.school}</li>
             </ul>
             </section>
-        </div>
     </div>
     `;
         htmlTeamInfo.push(htmlIntern);
@@ -98,21 +98,20 @@ module.exports = teamInfo => {
     <html lang="en">
     <head>
         <meta charset = "UTF-8">
-        <meta name="viewport" content="widthc=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
-        <link href="https://fonts.googleapis.com/css?family=Public+Sans:300i,300,500&display=swap" rel="stylesheet">
         <title>Employee Profiles</title>
     </head>
     
     <body>
         <header>
-            <div class="container flex-row justify-space-between align-center py-3">
-                <h1 class="page-title text-secondary bg-dark py-2 px-3">Our Employee Profiles</h1>
+            <div class="">
+                <h1 class="page-title is-danger">Our Employee Profiles</h1>
             </div>
         </header>
-        <main class="container my-5">
-            ${createTeam(teamInfo)}
+        <main class="tile is-ancestor"> 
+            ${createTeam(teamInfo)}        
         </main>
     </body>
     </html>
