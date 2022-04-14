@@ -9,9 +9,9 @@ const createTeam = (teamInfo) => {
         console.log(manager);
         var htmlManager = `
     
-    <div class="tile">
+    <div class="tile my-5 mx-5">
         <div class="is-child title is-primary">
-        ${manager.name} <br/>
+        ${manager.name} <br>
         Manager
         </div>
             <section class="is-link">
@@ -33,9 +33,9 @@ const createTeam = (teamInfo) => {
         console.log(engineer);
         var htmlEngineer = `
     
-    <div class="tile">
+    <div class="tile my-3">
         <div class="is-child title is-primary">
-        ${engineer.name} <br/>
+        ${engineer.name} <br>
         Engineer
         </div>
             <section class="is-link">
@@ -59,9 +59,9 @@ const createTeam = (teamInfo) => {
         console.log(intern);
         var htmlIntern = `
     
-    <div class="tile">
+    <div class="tile my-3">
         <div class="is-cheild title is-primary">
-        ${intern.name} <br/>
+        ${intern.name} <br>
         Intern
         </div>
             <section class="is-link">
@@ -105,9 +105,9 @@ module.exports = teamInfo => {
     </head>
     
     <body>
-        <header>
-            <div class="">
-                <h1 class="page-title is-danger">Our Employee Profiles</h1>
+        <header class="hero is-med is-danger">
+            <div class="hero-body">
+                <h1 class="title is1 has-text-centered">Our Employee Profiles</h1>
             </div>
         </header>
         <main class="tile is-ancestor"> 
