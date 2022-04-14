@@ -10,11 +10,11 @@ The purpose of the Employee-profiles application is to generate a webpage with a
 
 
 ## How it Works
-![Screencastify-employee-profiles]()
+![Screencastify-employee-profiles](https://github.com/jen2ags/Employee-profiles/blob/main/videos/Employee-profile%20video.webm)
 
 ## Screen Shot
-![Screenshot terminal questions]()
-![Screenshot generated HTML]()
+![Screenshot terminal questions](https://github.com/jen2ags/Employee-profiles/blob/main/images/Employee-profiles%20questions.png)
+![Screenshot generated HTML](https://github.com/jen2ags/Employee-profiles/blob/main/images/Employee-profiles%20page.png)
 
 
 ## Contribution
