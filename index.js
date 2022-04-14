@@ -251,28 +251,4 @@ function createTeam() {
     console.log('You have created your HTML for your employees!');
 }
 
-// Function to write HTML file
-//function writeToFile(fileName, data) {
-    //fs.writeFile(fileName, data, err => {
-            //if (err) {
-          //      return console.log(err);
-        //    }
-    
-      //  console.log("You can preview your HTML file now!");
-    
-    //});
-    //};
-    
-    // Function to initialize app
-  //  function init(teamInfo) {
-    //    inquirer.prompt()
-      //  .then(function (userInput) {
-        //    console.log(userInput)
-          //  writeToFile('./dist/generatedHTML', generateHTML(userInput));
-        //});
-    //};
-    
-    
-    // Function call to initialize app
-    //init();
     
